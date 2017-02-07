@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite 1" >
+	<listeners>
+		<listener class-name="utility.JyperionListener"></listener>
+	</listeners>
+	<test name="Regression Test">
+	<classes>
+
+		<!-- Test Case for setting snapshot folder and send mail after suite run -->
+			<class name="testCases.SS_SetSnapshotFolder_SendMail" />
+
+
+		<!-- Cart Page Test Cases -->
+	<!-- My Account Functionality -->
+<!-- Login Functionality -->
+			<class name="testCases.SS_Login" />
+			<class name="testCases.SS_Registration" />
+			<class name="testCases.SS_Registration_InvalidInput" />
+			<class name="testCases.SS_Login_BlankUsername" />
+			<class name="testCases.SS_Login_BlankPassword" />
+			<class name="testCases.SS_Invalid_Login" />
+			<class name="testCases.SS_Logout" />
+			<class name="testCases.SS_Logout_BackButton" />
+			<class name="testCases.SS_Forgot_Password" />
+			<class name="testCases.SS_Forgot_Password_Verify_Fields" />
+			<class name="testCases.SS_Forgot_Password_CorrectFormNavigation" />
+	
+
+			
+
+
+ 
+	
+			
+</classes>
+	</test>
+</suite> <!-- Suite -->

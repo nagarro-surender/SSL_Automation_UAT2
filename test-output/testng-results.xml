@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="11" passed="11">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite 1" duration-ms="330079" started-at="2017-02-07T08:26:58Z" finished-at="2017-02-07T08:32:28Z">
+    <groups>
+    </groups>
+    <test name="Regression Test" duration-ms="330079" started-at="2017-02-07T08:26:58Z" finished-at="2017-02-07T08:32:28Z">
+      <class name="testCases.SS_Forgot_Password_Verify_Fields">
+        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:testCases.SS_Forgot_Password_Verify_Fields@6d3af739]" name="BeforeMethod" is-config="true" duration-ms="8568" started-at="2017-02-07T14:01:54Z" finished-at="2017-02-07T14:02:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method status="PASS" signature="main()[pri:0, instance:testCases.SS_Forgot_Password_Verify_Fields@6d3af739]" name="main" duration-ms="8115" started-at="2017-02-07T14:02:02Z" finished-at="2017-02-07T14:02:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- main -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases.SS_Forgot_Password_Verify_Fields@6d3af739]" name="afterMethod" is-config="true" duration-ms="610" started-at="2017-02-07T14:02:10Z" finished-at="2017-02-07T14:02:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testCases.SS_Forgot_Password_Verify_Fields -->
+      <class name="testCases.SS_Registration_InvalidInput">
+        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:testCases.SS_Registration_InvalidInput@35a50a4c]" name="BeforeMethod" is-config="true" duration-ms="9514" started-at="2017-02-07T13:58:01Z" finished-at="2017-02-07T13:58:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method status="PASS" signature="main()[pri:0, instance:testCases.SS_Registration_InvalidInput@35a50a4c]" name="main" duration-ms="12654" started-at="2017-02-07T13:58:10Z" finished-at="2017-02-07T13:58:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- main -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases.SS_Registration_InvalidInput@35a50a4c]" name="afterMethod" is-config="true" duration-ms="567" started-at="2017-02-07T13:58:23Z" finished-at="2017-02-07T13:58:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testCases.SS_Registration_InvalidInput -->
+      <class name="testCases.SS_Logout">
+        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:testCases.SS_Logout@4516af24]" name="BeforeMethod" is-config="true" duration-ms="10011" started-at="2017-02-07T13:59:27Z" finished-at="2017-02-07T13:59:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method status="PASS" signature="main()[pri:0, instance:testCases.SS_Logout@4516af24]" name="main" duration-ms="25661" started-at="2017-02-07T13:59:37Z" finished-at="2017-02-07T14:00:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- main -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases.SS_Logout@4516af24]" name="afterMethod" is-config="true" duration-ms="610" started-at="2017-02-07T14:00:02Z" finished-at="2017-02-07T14:00:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testCases.SS_Logout -->
+      <class name="testCases.SS_Login_BlankUsername">
+        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:testCases.SS_Login_BlankUsername@1f021e6c]" name="BeforeMethod" is-config="true" duration-ms="9961" started-at="2017-02-07T13:58:24Z" finished-at="2017-02-07T13:58:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method status="PASS" signature="main()[pri:0, instance:testCases.SS_Login_BlankUsername@1f021e6c]" name="main" duration-ms="10573" started-at="2017-02-07T13:58:34Z" finished-at="2017-02-07T13:58:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- main -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases.SS_Login_BlankUsername@1f021e6c]" name="afterMethod" is-config="true" duration-ms="11" started-at="2017-02-07T13:58:44Z" finished-at="2017-02-07T13:58:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testCases.SS_Login_BlankUsername -->
+      <class name="testCases.SS_Invalid_Login">
+        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:testCases.SS_Invalid_Login@587c290d]" name="BeforeMethod" is-config="true" duration-ms="10246" started-at="2017-02-07T13:59:07Z" finished-at="2017-02-07T13:59:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method status="PASS" signature="main()[pri:0, instance:testCases.SS_Invalid_Login@587c290d]" name="main" duration-ms="9094" started-at="2017-02-07T13:59:18Z" finished-at="2017-02-07T13:59:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- main -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases.SS_Invalid_Login@587c290d]" name="afterMethod" is-config="true" duration-ms="8" started-at="2017-02-07T13:59:27Z" finished-at="2017-02-07T13:59:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testCases.SS_Invalid_Login -->
+      <class name="testCases.SS_Registration">
+        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:testCases.SS_Registration@281e3708]" name="BeforeMethod" is-config="true" duration-ms="9355" started-at="2017-02-07T13:57:36Z" finished-at="2017-02-07T13:57:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method status="PASS" signature="main()[pri:0, instance:testCases.SS_Registration@281e3708]" name="main" duration-ms="15253" started-at="2017-02-07T13:57:45Z" finished-at="2017-02-07T13:58:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- main -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases.SS_Registration@281e3708]" name="afterMethod" is-config="true" duration-ms="615" started-at="2017-02-07T13:58:00Z" finished-at="2017-02-07T13:58:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testCases.SS_Registration -->
+      <class name="testCases.SS_Forgot_Password">
+        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:testCases.SS_Forgot_Password@543788f3]" name="BeforeMethod" is-config="true" duration-ms="9667" started-at="2017-02-07T14:00:44Z" finished-at="2017-02-07T14:00:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method status="PASS" signature="main()[pri:0, instance:testCases.SS_Forgot_Password@543788f3]" name="main" duration-ms="59571" started-at="2017-02-07T14:00:54Z" finished-at="2017-02-07T14:01:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- main -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases.SS_Forgot_Password@543788f3]" name="afterMethod" is-config="true" duration-ms="617" started-at="2017-02-07T14:01:53Z" finished-at="2017-02-07T14:01:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testCases.SS_Forgot_Password -->
+      <class name="testCases.SS_Forgot_Password_CorrectFormNavigation">
+        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:testCases.SS_Forgot_Password_CorrectFormNavigation@1da51a35]" name="BeforeMethod" is-config="true" duration-ms="8820" started-at="2017-02-07T14:02:11Z" finished-at="2017-02-07T14:02:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method status="PASS" signature="main()[pri:0, instance:testCases.SS_Forgot_Password_CorrectFormNavigation@1da51a35]" name="main" duration-ms="7726" started-at="2017-02-07T14:02:20Z" finished-at="2017-02-07T14:02:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- main -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases.SS_Forgot_Password_CorrectFormNavigation@1da51a35]" name="afterMethod" is-config="true" duration-ms="522" started-at="2017-02-07T14:02:28Z" finished-at="2017-02-07T14:02:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testCases.SS_Forgot_Password_CorrectFormNavigation -->
+      <class name="testCases.SS_SetSnapshotFolder_SendMail">
+        <test-method status="PASS" signature="setSnapShotFolder()[pri:0, instance:testCases.SS_SetSnapshotFolder_SendMail@24b1d79b]" name="setSnapShotFolder" is-config="true" duration-ms="16" started-at="2017-02-07T13:56:58Z" finished-at="2017-02-07T13:56:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setSnapShotFolder -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.SS_SetSnapshotFolder_SendMail@24b1d79b]" name="tearDown" is-config="true" duration-ms="27924" started-at="2017-02-07T14:02:28Z" finished-at="2017-02-07T14:02:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.SS_SetSnapshotFolder_SendMail -->
+      <class name="testCases.SS_Login">
+        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:testCases.SS_Login@68ceda24]" name="BeforeMethod" is-config="true" duration-ms="15008" started-at="2017-02-07T13:56:58Z" finished-at="2017-02-07T13:57:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method status="PASS" signature="main()[pri:0, instance:testCases.SS_Login@68ceda24]" name="main" duration-ms="21677" started-at="2017-02-07T13:57:13Z" finished-at="2017-02-07T13:57:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- main -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases.SS_Login@68ceda24]" name="afterMethod" is-config="true" duration-ms="696" started-at="2017-02-07T13:57:35Z" finished-at="2017-02-07T13:57:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testCases.SS_Login -->
+      <class name="testCases.SS_Logout_BackButton">
+        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:testCases.SS_Logout_BackButton@4ae82894]" name="BeforeMethod" is-config="true" duration-ms="9247" started-at="2017-02-07T14:00:03Z" finished-at="2017-02-07T14:00:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method status="PASS" signature="main()[pri:0, instance:testCases.SS_Logout_BackButton@4ae82894]" name="main" duration-ms="30757" started-at="2017-02-07T14:00:12Z" finished-at="2017-02-07T14:00:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- main -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases.SS_Logout_BackButton@4ae82894]" name="afterMethod" is-config="true" duration-ms="768" started-at="2017-02-07T14:00:43Z" finished-at="2017-02-07T14:00:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testCases.SS_Logout_BackButton -->
+      <class name="testCases.SS_Login_BlankPassword">
+        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:testCases.SS_Login_BlankPassword@103f852]" name="BeforeMethod" is-config="true" duration-ms="9849" started-at="2017-02-07T13:58:44Z" finished-at="2017-02-07T13:58:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method status="PASS" signature="main()[pri:0, instance:testCases.SS_Login_BlankPassword@103f852]" name="main" duration-ms="13419" started-at="2017-02-07T13:58:54Z" finished-at="2017-02-07T13:59:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- main -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases.SS_Login_BlankPassword@103f852]" name="afterMethod" is-config="true" duration-ms="11" started-at="2017-02-07T13:59:07Z" finished-at="2017-02-07T13:59:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testCases.SS_Login_BlankPassword -->
+    </test> <!-- Regression Test -->
+  </suite> <!-- Suite 1 -->
+</testng-results>

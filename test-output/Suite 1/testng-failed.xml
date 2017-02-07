@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite 1]">
+  <listeners>
+    <listener class-name="utility.JyperionListener"/>
+  </listeners>
+  <test name="Regression Test(failed)">
+    <classes>
+      <class name="testCases.SS_ProfilePage_DeleteAddress">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="BeforeMethod"/>
+        </methods>
+      </class> <!-- testCases.SS_ProfilePage_DeleteAddress -->
+      <class name="testCases.SS_MyAccount_Verify_Account_Details">
+        <methods>
+          <include name="BeforeMethod"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases.SS_MyAccount_Verify_Account_Details -->
+      <class name="testCases.SS_ProfilePage_EditAddress_ChangeDefaultAddress">
+        <methods>
+          <include name="BeforeMethod"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases.SS_ProfilePage_EditAddress_ChangeDefaultAddress -->
+      <class name="testCases.SS_SetSnapshotFolder_SendMail">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setSnapShotFolder"/>
+        </methods>
+      </class> <!-- testCases.SS_SetSnapshotFolder_SendMail -->
+      <class name="testCases.SS_ProfilePage_AddMultipleAddress">
+        <methods>
+          <include name="BeforeMethod"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases.SS_ProfilePage_AddMultipleAddress -->
+      <class name="testCases.SS_MyAccount_RecentOrder">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="BeforeMethod"/>
+        </methods>
+      </class> <!-- testCases.SS_MyAccount_RecentOrder -->
+      <class name="testCases.SS_ProfilePage_AddNewAddress">
+        <methods>
+          <include name="BeforeMethod"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases.SS_ProfilePage_AddNewAddress -->
+      <class name="testCases.SS_Order_OrderDetailsPage">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="BeforeMethod"/>
+        </methods>
+      </class> <!-- testCases.SS_Order_OrderDetailsPage -->
+      <class name="testCases.SS_ProfilePage_Multiple_Address_Only_SingleDefaultAddress">
+        <methods>
+          <include name="BeforeMethod"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases.SS_ProfilePage_Multiple_Address_Only_SingleDefaultAddress -->
+      <class name="testCases.SS_ProfilePage_PersonalInfo">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="BeforeMethod"/>
+        </methods>
+      </class> <!-- testCases.SS_ProfilePage_PersonalInfo -->
+      <class name="testCases.SS_ProfilePage_PersonalInfo_Update">
+        <methods>
+          <include name="main"/>
+          <include name="afterMethod"/>
+          <include name="BeforeMethod"/>
+        </methods>
+      </class> <!-- testCases.SS_ProfilePage_PersonalInfo_Update -->
+      <class name="testCases.SS_ProfilePage_Change_Password">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="BeforeMethod"/>
+        </methods>
+      </class> <!-- testCases.SS_ProfilePage_Change_Password -->
+      <class name="testCases.SS_ProfilePage_Change_Password_VerifyFields">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="BeforeMethod"/>
+        </methods>
+      </class> <!-- testCases.SS_ProfilePage_Change_Password_VerifyFields -->
+      <class name="testCases.SS_ProfilePage_Change_Password_VerifyButtons">
+        <methods>
+          <include name="BeforeMethod"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases.SS_ProfilePage_Change_Password_VerifyButtons -->
+      <class name="testCases.SS_MyAccount_Verify_Wishlist">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="BeforeMethod"/>
+        </methods>
+      </class> <!-- testCases.SS_MyAccount_Verify_Wishlist -->
+      <class name="testCases.SS_MyAccount_NewsLetterAndSubscription">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="BeforeMethod"/>
+        </methods>
+      </class> <!-- testCases.SS_MyAccount_NewsLetterAndSubscription -->
+      <class name="testCases.SS_ProfilePage_EditAddress">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="BeforeMethod"/>
+        </methods>
+      </class> <!-- testCases.SS_ProfilePage_EditAddress -->
+      <class name="testCases.SS_MyAccount_Verify_No_Orders">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="BeforeMethod"/>
+        </methods>
+      </class> <!-- testCases.SS_MyAccount_Verify_No_Orders -->
+      <class name="testCases.SS_Order_OrderHistory">
+        <methods>
+          <include name="BeforeMethod"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases.SS_Order_OrderHistory -->
+      <class name="testCases.SS_MyAccount_Verify_All_Menu">
+        <methods>
+          <include name="BeforeMethod"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases.SS_MyAccount_Verify_All_Menu -->
+    </classes>
+  </test> <!-- Regression Test(failed) -->
+</suite> <!-- Failed suite [Suite 1] -->
