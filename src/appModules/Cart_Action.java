@@ -254,7 +254,7 @@ public class Cart_Action {
 		Cart_Page.CheckoutButton().click();
 		Log.info("Checkout button is clicked on cart page");
 		try {
-			Utils.PageHeaderCheck("Proceed to Checkout | SSL Site");
+			Utils.PageHeaderCheck("Proceed to Checkout | Shoppers Stop");
 		} catch (Exception e) {
 			Log.error("Exception in Class Cart_Action | Method Check_NavigationTo_Checkout_GuestUser");
 			Log.error(e.getMessage());
@@ -569,6 +569,34 @@ public class Cart_Action {
 		}
 	}
 
+	public static void Verify_Public_Edit_Cart_Page_sameproduct(int iTestCaseRow) throws Exception {
+		Log.info("Verification for edit cart functionality on cart page for guest user started");
+		String productQuantity = "";
+		String productSize = "";
+		try {
+			productQuantity = Cart_Page.UpdateQuantity().get(0).getAttribute("value");
+			Thread.sleep(3000);
+			Cart_Page.EditCartLink().get(0).click();
+			Log.info("Edit cart link clicked successfully");
+			Thread.sleep(5000);
+			Utils.SelectDropdownUpdated(Cart_Page.UpdateProductSize().get(0));
+			Thread.sleep(3000);
+			Cart_Page.UpdateCartItem().get(0).sendKeys(Keys.ENTER);
+			Log.info("Update cart link clicked successfully");
+			Thread.sleep(3000);
+			if (Cart_Page.UpdateQuantity().get(0).getAttribute("value").equals(productQuantity)) {
+				BaseClass.errorValidation += "Product quantity increase functionality not working\n";
+			}
+		} catch (Exception e) {
+			Log.error("Exception in Class Cart_Action | Method Verify_Public_Edit_Cart_Page");
+			Log.error(e.getMessage());
+			throw e;
+		}
+		if (!BaseClass.errorValidation.isEmpty()) {
+			Log.error("Exception in Class Cart_Action | Method Verify_Public_Edit_Cart_Page");
+			throw new Exception(BaseClass.errorValidation);
+		}
+	}
 	public static void Verify_Private_Cart_Page_RemoveProduct(int iTestCaseRow) throws Exception {
 		Log.info("Verification for removing product from cart page started");
 		int productCountBefore;
@@ -874,15 +902,15 @@ public class Cart_Action {
 			Log.info("BacktoCart button clicked successfully");
 			
 			Utils.verifyElement(Home_Page.headerMiniCartIcon());
-			//Utils.mouseHover(Home_Page.headerMiniCartIcon());
-			Home_Page.headerMiniCartIcon().click();
+			Utils.mouseHover(Home_Page.headerMiniCartIcon());
+			//Home_Page.headerMiniCartIcon().click();
 			Thread.sleep(5000);
 			
 			totalCartPrice2=Cart_Page.TotalCartPriceMain().getText();
 			System.out.println(totalCartPrice2);
 			
 			//if (Cart_Page.TotalCartPriceMain().getText().equals(BeforePrice)) {
-				//BaseClass.errorValidation += "Coupon coded discount not applied. \n";
+			//	BaseClass.errorValidation += "Coupon coded discount not applied. \n";
 			
 		} catch (Exception e) {
 			Log.error("Exception in Class Cart_Action | Method Verify_Private_Cart_Page_ApplyCoupan");

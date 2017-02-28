@@ -223,6 +223,27 @@ public class Cart_Page extends BaseClass {
 
 	}
 	
+	public static WebElement TotalCartPriceMain1() throws Exception {
+
+		try {
+			Log.info("Locating TotalCartPrice element");
+			
+			//element = Driver.findElement(By.xpath("//*[@class='shopping-wrap js-mini-cart-container']//div[@class='total']"));
+			
+			element = Driver.findElement(By.xpath("//section[@class='shopping-bag-wpr']//div[@class='shopping-heading-top']//span[@itemprop='price']/following-sibling::meta[@itemprop='price']"));
+				
+					
+			Log.info("Total Cart Price field exist on the cart page");
+
+		} catch (Exception e) {
+			Log.error("Exception in Class Cart_Page | Method TotalCartPrice");
+			Log.error("Total Cart Price field does not exist on the cart page");
+			throw e;
+		}
+
+		return element;
+
+	}
 	public static WebElement MiniCart() throws Exception {
 
 		try {
@@ -376,7 +397,24 @@ public class Cart_Page extends BaseClass {
 		return elements;
 
 	}
+	public static List<WebElement> UpdateProductSize() throws Exception {
 
+		try {
+			Log.info("Locating Update ProductSize Field elements on the cart page");
+			elements = Driver.findElements(By.xpath(
+					"//section[@class='shopping-bag-wpr']/descendant::form[contains(@id,'updateCartForm')]/ul/li[2]//*[contains(@id,'sizeProductCode')]"));
+
+			Log.info("Update Quantity Field exist on the cart page");
+
+		} catch (Exception e) {
+			Log.error("Exception in Class Cart_Page | Method UpdateQuantity");
+			Log.error("Update Quantity Field does not exist on the cart page");
+			throw e;
+		}
+
+		return elements;
+
+	}
 	public static List<WebElement> UpdateQuantity() throws Exception {
 
 		try {
@@ -457,11 +495,10 @@ public class Cart_Page extends BaseClass {
 
 		try {
 			Log.info("Locating Checkout button on the cart page");
-			//element = Driver
-				//	.findElement(By.xpath("//section[@class='shopping-bag-wpr']//button[@class='btn-place-order']"));
+			element = Driver.findElement(By.xpath("//section[@class='shopping-bag-wpr']//button[@class='btn-place-order']"));
 			
-			element = Driver
-					.findElement(By.xpath("html/body/main/section[2]/div/div/div[2]/div[1]/div[2]/div[1]/div/form/button"));
+			//element = Driver
+				//	.findElement(By.xpath("html/body/main/section[2]/div/div/div[2]/div[1]/div[2]/div[1]/div/form/button"));
 
 			Log.info("Checkout button exist on the cart page");
 
@@ -530,6 +567,24 @@ public class Cart_Page extends BaseClass {
 		}
 
 		return elements;
+
+	}
+	
+	public static WebElement RemovefromMiniCart() throws Exception {
+
+		try {
+			Log.info("Locating Cart Page alert on the cart page");
+			
+			element = Driver.findElement(By.xpath(".//*[@id='removeEntry_1']"));
+			Log.info("Cart Page alert exist on the cart page");
+
+		} catch (Exception e) {
+			Log.error("Exception in Class Cart_Page | Method CartPageAlert");
+			Log.error("Cart Page alert does not exist on the cart page");
+			throw e;
+		}
+
+		return element;
 
 	}
 
@@ -1339,6 +1394,24 @@ public class Cart_Page extends BaseClass {
 		} catch (Exception e) {
 			Log.error("Exception in Class Cart_Page | Method CheckoutButton");
 			Log.error("Checkout button does not exist on the cart page");
+			throw e;
+		}
+
+		return element;
+	}
+	
+	public static WebElement CheckoutButtonOnMiniCart() {
+		try {
+			Log.info("Locating Checkout button on the MiniCart");
+			element = Driver.findElement(By.xpath("//section[@class='shopping-bag-wpr']//button[@class='btn-place-order']"));
+			
+
+
+			Log.info("Checkout button exist on the MiniCart");
+
+		} catch (Exception e) {
+			Log.error("Exception in Class Cart_Page | Method CheckoutButtonOnMiniCart");
+			Log.error("Checkout button does not exist on the minicart");
 			throw e;
 		}
 

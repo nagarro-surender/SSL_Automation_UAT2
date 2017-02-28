@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import pageObjects.BaseClass;
 import pageObjects.Cart_Page;
 import pageObjects.Checkout_Page;
+import pageObjects.Home_Page;
 import pageObjects.MiniCart_Page;
 import pageObjects.ProductDetails_Page;
 import pageObjects.ProductListing_Page;
@@ -93,7 +94,10 @@ public class SS_CheckOut_MiniCart_AlreadyLoginUser_NewAddress_Coupanapply_CheckM
 			CheckOut_Action.ProceedwithNewAddress(iTestCaseRow);
 			
 			Cart_Action.Verify_Private_Cart_Page_ApplyCoupan_noremove(iTestCaseRow);
+		
+			
 			System.out.println(Cart_Page.TotalCartPriceMain().getText());
+			
 			if (Cart_Page.TotalCartPriceMain().getText().equals(BeforePrice)) {
 				BaseClass.errorValidation += "Coupon coded discount not applied. \n";
 				

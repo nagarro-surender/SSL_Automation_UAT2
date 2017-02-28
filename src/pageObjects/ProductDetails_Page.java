@@ -573,6 +573,26 @@ public class ProductDetails_Page extends BaseClass {
 
 			return element;
 		}
+		
+		public static WebElement Quick_AddToCart() throws Exception {
+
+			try {
+				Log.info("Locating WishList_AddToCart element");
+				element = Driver
+						.findElement(By.xpath(".//*[@id='quick-view-box']//*[@id='addToCartButtonCart_id']"));
+
+				Log.info("Add to cart button is found on page");
+
+			} catch (Exception e) {
+				Log.error("Exception in Class ProductDetails_Page | Method Product_AddToCart");
+				Log.error("Add to cart button is not found on page");
+
+				throw (e);
+
+			}
+
+			return element;
+		}
 			public static WebElement WishlistQuickbtn() throws Exception {
 
 				try {

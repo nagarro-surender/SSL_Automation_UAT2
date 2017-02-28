@@ -841,7 +841,7 @@ public class Home_Page extends BaseClass {
 		try {
 			Log.info("Locating headerSoppersStopLogo element");
 			element = Driver.findElement(By.xpath(
-					"//a[@href='/en/']"));
+					"//a[@href='/cart']"));
 
 			Log.info("Shoppers Stop logo is found on the Header on Home Page");
 
@@ -896,7 +896,7 @@ public class Home_Page extends BaseClass {
 		try {
 			Log.info("Locating headerWishlistItemCountIcon element");
 			element = Driver
-					.findElement(By.xpath("//a[@class='wishlist' and @href='/en/wishlist']/following-sibling::span"));
+					.findElement(By.xpath("//a[@class='wishlist' and @href='/wishlist']/following-sibling::span"));
 
 			Log.info("Notification icon is found on the Header on Home Page");
 
