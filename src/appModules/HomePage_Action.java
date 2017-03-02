@@ -3,6 +3,7 @@ package appModules;
 import java.util.List;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
@@ -467,7 +468,7 @@ public class HomePage_Action {
 			Utils.performAssertEquals(Home_Page.headerWishlistMenuHeading(), "Your Saved Items Are Empty");
 
 			System.out.println(Home_Page.headerWishlistMenuText().getText());
-			Utils.performAssertEquals(Home_Page.headerWishlistMenuText(), "Please LOGIN or REGISTER to add a products");
+			Utils.performAssertEquals(Home_Page.headerWishlistMenuText(), "Please LOGIN or REGISTER to add products");
 
 			Log.info("Verification check done for Wishlist Alert functionality");
 
@@ -506,6 +507,32 @@ public class HomePage_Action {
 		}
 	}
 
+	
+	public static void Header_Private_Verify_ContactUS_Functionality(int iTestCaseRow) throws Exception {
+		try {
+			Log.info("Verification for ContactUS icon functionality in Header");
+			Home_Page.ContactUSIcon().click();
+			Log.info("ContactUS icon clicked successfully");
+			Home_Page.OrderField().click();
+			System.out.println(Home_Page.headerContactUSOrder().size());
+			if (Home_Page.headerContactUSOrder().size() <= 13) {
+				Log.info("Verification check done for User specific orders ");
+			} else {
+				BaseClass.errorValidation += "Order greater than 12 \n";
+			}
+			Log.info("Verification check done for User specific orders logged in User");
+
+		} catch (Exception e) {
+
+			Log.error("Verification check Failed for Wishlist Alert functionality");
+			Log.error("Exception in Class HomePage_Action | Method Header_Private_Verify_ContactUS_Functionality");
+			throw e;
+		}
+		if (!BaseClass.errorValidation.isEmpty()) {
+			Log.error("Exception in Class HomePage_Action | Method Header_Private_Verify_Wishlist_Functionality");
+			throw new Exception(BaseClass.errorValidation);
+		}
+	}
 	public static void Header_Public_Verify_Wishlist_Link(int iTestCaseRow) throws Exception {
 		try {
 			Log.info("Verification for Header Wishlist Icon");

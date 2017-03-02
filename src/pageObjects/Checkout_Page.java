@@ -1071,8 +1071,8 @@ public class Checkout_Page extends BaseClass {
 
 			try {
 				Log.info("Locating DebitCard_PlaceOrderBtn element");
-				element = Driver.findElement(By.xpath("//*[@id='debitform']"));
-
+				//element = Driver.findElement(By.xpath("//*[@id='debitform']"));
+				element = Driver.findElement(By.xpath(".//*[@id='debitCardButton']"));
 				Log.info("Debit Card place order button is found on the checkout Page");
 
 			} catch (Exception e) {

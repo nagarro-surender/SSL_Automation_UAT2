@@ -551,11 +551,11 @@ public static List<WebElement> DefaultAttributeFilterCategoryContainer()throws E
 		try {
 			Log.info("Locating Sale offer on PLP ");
 			element = Driver.findElement(By
-				.xpath("//input[@id='Flat 20% Off' and @type='checkbox']"));
+				.xpath("//input[@id='Buy 1 Get 1 Free' and @type='checkbox']"));
 			
 			//element = Driver.findElement(By
 				//	.xpath(".//*[@class='filter-scroll promo-list js-facet-form']//*[@id='"+saleOffer+"']"));
-			Log.info("Sale offer is present on PLP ");
+			Log.info("Sale offer is present on PLP");
 
 		} catch (Exception e) {
 			Log.error("Exception in Class ProductListing_Page | Method SelectOnSaleCheckbox");

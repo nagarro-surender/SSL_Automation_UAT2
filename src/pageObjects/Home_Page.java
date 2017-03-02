@@ -890,7 +890,46 @@ public class Home_Page extends BaseClass {
 		return element;
 
 	}
+	
+	public static WebElement ContactUSIcon() throws Exception {
 
+		try {
+			Log.info("Locating ContactUSIcon element");
+			//element = Driver.findElement(By.xpath("html/body/main/header/div/div/div/div[5]/ul/li[3]/a"));
+			
+			element = Driver.findElement(By.xpath("//*[@href='/contactUs']"));
+
+			Log.info("ContactUS icon is found on the Header on Home Page");
+
+		} catch (Exception e) {
+			Log.error("Exception in Class Home_Page | Method  ContactUSIcon");
+			Log.error("ContactUS icon is not found on the Header on Home Page");
+			throw e;
+		}
+
+		return element;
+
+	}
+
+	public static WebElement OrderField() throws Exception {
+
+		try {
+			Log.info("Locating OrderField element");
+			//element = Driver.findElement(By.xpath("html/body/main/header/div/div/div/div[5]/ul/li[3]/a"));
+			
+			element = Driver.findElement(By.xpath(".//*[@id='complaintForm']/div[1]/div[6]/div/select"));
+
+			Log.info("OrderField icon is found on the Header on Home Page");
+
+		} catch (Exception e) {
+			Log.error("Exception in Class Home_Page | Method OrderField");
+			Log.error("OrderField element is not found on the Header on Home Page");
+			throw e;
+		}
+
+		return element;
+
+	}
 	public static WebElement headerWishlistItemCountIcon() throws Exception {
 
 		try {
@@ -1007,6 +1046,22 @@ public class Home_Page extends BaseClass {
 		} catch (Exception e) {
 			Log.error("Exception in Class Home_Page | Method headerWishlistUserMenu");
 			Log.error("Wishlist user menu is not found on the Home Page");
+			throw e;
+		}
+
+		return webElements;
+	}
+	
+	public static List<WebElement> headerContactUSOrder()throws Exception {
+		try {
+			Log.info("Locating Orders elements");
+			webElements = Driver.findElements(By.xpath(".//*[@id='complaintForm']/div[1]/div[6]/div/select/option"));
+
+			Log.info("Orders is found on Home Page");
+
+		} catch (Exception e) {
+			Log.error("Exception in Class Home_Page | Method headerContactUSOrder");
+			Log.error("Orders  is not found on the Home Page");
 			throw e;
 		}
 

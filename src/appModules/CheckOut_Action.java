@@ -1101,7 +1101,7 @@ public class CheckOut_Action {
 
 				Log.info("CreditCard details entered successfully");
 
-				// Checkout_Page.Paymentinfo.CreditCard_PlaceOrderBtn().click();
+			 Checkout_Page.Paymentinfo.CreditCard_PlaceOrderBtn().click();
 
 			}
 			
@@ -1116,14 +1116,12 @@ public class CheckOut_Action {
 				Checkout_Page.Paymentinfo.Wallets_SelectFromVisibleList(WalletName).click();
 				Log.info("Wallet selected from the options displayed");
 		
-				} 
-				else {
-					throw new Exception("Invalid Wallet selection criteria");
-				}
+			
+			
 
 				Log.info("Wallet selected successfully");
 				Checkout_Page.Paymentinfo.Wallet_PlaceOrderBtn().click();
-				
+		}	
 			if (paymentMode.equals("DebitCard")) {
 
 				Checkout_Page.Paymentinfo.DebitCardOption().click();
@@ -1147,7 +1145,7 @@ public class CheckOut_Action {
 
 				Log.info("DebitCard details entered successfully");
 
-				// Checkout_Page.Paymentinfo.DebitCard_PlaceOrderBtn().click();
+			 Checkout_Page.Paymentinfo.DebitCard_PlaceOrderBtn().click();
 
 			}
 
@@ -1179,7 +1177,7 @@ public class CheckOut_Action {
 				}
 
 				Log.info("Bank selected successfully");
-				// Checkout_Page.Paymentinfo.NetBanking_PlaceOrderBtn().click();
+			 Checkout_Page.Paymentinfo.NetBanking_PlaceOrderBtn().click();
 
 			}
 
