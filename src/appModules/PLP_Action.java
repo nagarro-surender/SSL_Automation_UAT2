@@ -653,7 +653,7 @@ public class PLP_Action {
 			if (!(ProductListing_Page.DefaultAttributeFilterAppliedList().size() > 0)) {
 				BaseClass.errorValidation += "Filters applied container not present on PLP page\n";
 			} else {
-				ProductListing_Page.DefaultAttributeFilterCloseAll().click();
+				ProductListing_Page.DefaultAttributeFilterCloseAllFilter().click();
 				Log.info("Close all link clicked to remove applied filters on PLP page");
 				if (!(ProductListing_Page.ProductCount().getText().equals(productCount))) {
 					BaseClass.errorValidation += "Product count not reset to default product count after clearing all filters \n";

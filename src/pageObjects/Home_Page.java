@@ -54,6 +54,23 @@ public class Home_Page extends BaseClass {
 
 	}
 
+	public static WebElement Clinique() throws Exception {
+
+		try {
+			Log.info("Locating Clinique Brand element");
+			element = Driver.findElement(By.xpath("//a[contains(@href,'clinique')]"));
+
+			Log.info("Clinique Brand element is found on the Home Page");
+
+		} catch (Exception e) {
+			Log.error("Exception in Class Home_Page | Method Clinique");
+			Log.error("Clinique Brand element is not found on the Home Page");
+			throw e;
+		}
+
+		return element;
+
+	}
 	public static WebElement Register() throws Exception {
 
 		try {
@@ -1136,6 +1153,40 @@ public class Home_Page extends BaseClass {
 			element = Driver.findElement(By.xpath("//a[@title='" + categoryTitle
 					+ "']/following-sibling::div//a[@title='" + subCategoryTitle + "']"));
 
+			Log.info("Sub Menu Category is found on Home Page");
+
+		} catch (Exception e) {
+			Log.error("Exception in Class Home_Page | Method menuSubCategory");
+			Log.error("Sub Menu Category is not found on Home Page");
+			throw e;
+		}
+
+		return element;
+	}
+	
+	public static WebElement menuSubCategoryFilter(String categoryTitle, String subCategoryTitle) throws Exception {
+		try {
+			Log.info("Locating menuSubCategory element");
+			element = Driver.findElement(By.xpath("//a[@title='" + categoryTitle
+					+ "']/following-sibling::div//a[contains(@href, '/men-clothing/c-A1010')]"));
+			
+			Log.info("Sub Menu Category is found on Home Page");
+
+		} catch (Exception e) {
+			Log.error("Exception in Class Home_Page | Method menuSubCategory");
+			Log.error("Sub Menu Category is not found on Home Page");
+			throw e;
+		}
+
+		return element;
+	}
+	
+	public static WebElement menuSubCategoryClinique(String categoryTitle, String subCategoryTitle) throws Exception {
+		try {
+			Log.info("Locating menuSubCategory element");
+			element = Driver.findElement(By.xpath("//a[@title='" + categoryTitle
+					+ "']/following-sibling::div//a[contains(@href, '/brand/all')]"));
+	
 			Log.info("Sub Menu Category is found on Home Page");
 
 		} catch (Exception e) {

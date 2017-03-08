@@ -36,6 +36,23 @@ public class ProductListing_Page extends BaseClass {
 
 	}
 	
+	public static WebElement cliniqueproduct() throws Exception {
+
+		try {
+			Log.info("Locating Product link on PLP");
+			element = Driver.findElement(By.xpath(".//*[@id='1HashPosition']"));
+			Log.info("Product link found on PLP");
+
+		} catch (Exception e) {
+			Log.error("Exception in Class ProductListing_Page | Method product");
+			Log.error("Product link not found on PLP");
+			throw (e);
+		}
+
+		return element;
+
+	}
+	
 	public static WebElement checkout_product() throws Exception {
 
 		try {
@@ -289,6 +306,24 @@ public static List<WebElement> DefaultAttributeFilterCategoryContainer()throws E
 			Log.info("Locating Default Attribute Filter Applied List close all icon on PLP ");
 			element = Driver.findElement(By.xpath(
 					"//div[@class='refine-pins']//label[contains(text(),'Clear')]/following-sibling::a/span[@class='glyphicon-glyphicon-remove']"));
+			Log.info("Default Attribute Filter Applied List close all icon is present on PLP ");
+
+		} catch (Exception e) {
+			Log.error("Exception in Class ProductListing_Page | Method DefaultAttributeFilterCloseAll");
+			Log.error("Default Attribute Filter Applied List close all icon is not found on PLP");
+			throw (e);
+		}
+
+		return element;
+
+	}
+	
+	public static WebElement DefaultAttributeFilterCloseAllFilter() throws Exception {
+
+		try {
+			Log.info("Locating Default Attribute Filter Applied List close all icon on PLP ");
+			element = Driver.findElement(By.xpath(
+					"//*[@class='product-listing-wrapper']//*[@class='clear-filter']//a[text()='Clear']"));
 			Log.info("Default Attribute Filter Applied List close all icon is present on PLP ");
 
 		} catch (Exception e) {

@@ -66,7 +66,7 @@ public class SS_PLP_Verify_ClearAll_Refinements_Functionality {
 	@Test
 	public void main() throws Exception {
 		try {
-			HomePage_Action.selectProductCategoryfromMenu(iTestCaseRow);
+			HomePage_Action.selectProductCategoryfromMenuFilter(iTestCaseRow);
 			Log.info("Product Listing page displayed");
 			PLP_Action.PLP_Verify_ClearAll_Refinements_Functionality(iTestCaseRow);
 			ExcelUtils.setCellData("Pass", iTestCaseRow, Constant.result);
