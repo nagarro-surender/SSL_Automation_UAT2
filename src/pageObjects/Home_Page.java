@@ -1168,7 +1168,7 @@ public class Home_Page extends BaseClass {
 		try {
 			Log.info("Locating menuSubCategory element");
 			element = Driver.findElement(By.xpath("//a[@title='" + categoryTitle
-					+ "']/following-sibling::div//a[contains(@href, '/men-clothing/c-A1010')]"));
+					+ "']/following-sibling::div//a[contains(@href, '/women-westernwear/c-A2060')]"));
 			
 			Log.info("Sub Menu Category is found on Home Page");
 
