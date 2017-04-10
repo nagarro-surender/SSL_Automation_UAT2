@@ -40,7 +40,7 @@ public class ProductListing_Page extends BaseClass {
 
 		try {
 			Log.info("Locating Product link on PLP");
-			element = Driver.findElement(By.xpath(".//*[@id='1HashPosition']"));
+			element = Driver.findElement(By.xpath(".//*[@id='3HashPosition']"));
 			Log.info("Product link found on PLP");
 
 		} catch (Exception e) {
@@ -396,7 +396,7 @@ public static List<WebElement> DefaultAttributeFilterCategoryContainer()throws E
 		try {
 			Log.info("Locating Default Attribute Filter Applied List close all icon on PLP ");
 			element = Driver.findElement(By.xpath(
-					"//*[@class='product-listing-wrapper']//*[@class='clear-filter']//a[text()='Clear']"));
+					"//*[@class='clear-filter']//a[text()='Clear']"));
 			Log.info("Default Attribute Filter Applied List close all icon is present on PLP ");
 
 		} catch (Exception e) {

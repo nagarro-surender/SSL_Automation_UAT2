@@ -1400,10 +1400,30 @@ public class Cart_Page extends BaseClass {
 		return element;
 	}
 	
+
+	
 	public static WebElement CheckoutButtonOnMiniCart() {
 		try {
 			Log.info("Locating Checkout button on the MiniCart");
 			element = Driver.findElement(By.xpath("//section[@class='shopping-bag-wpr']//button[@class='btn-place-order']"));
+			
+
+
+			Log.info("Checkout button exist on the MiniCart");
+
+		} catch (Exception e) {
+			Log.error("Exception in Class Cart_Page | Method CheckoutButtonOnMiniCart");
+			Log.error("Checkout button does not exist on the minicart");
+			throw e;
+		}
+
+		return element;
+	}
+	
+	public static WebElement CheckoutButtonOnMiniCartFCC() {
+		try {
+			Log.info("Locating Checkout button on the MiniCart");
+			element = Driver.findElement(By.xpath("//*[contains(@href,'/cart/checkout')]"));
 			
 
 

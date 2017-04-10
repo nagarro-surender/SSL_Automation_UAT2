@@ -116,22 +116,22 @@ public class FCC_Action {
 			Log.info("Title is selected");
 			//Thread.sleep(5000);
 			FCC_Page.FCC_Form.FCCForm_DateOfBirth().sendKeys(ExcelUtils.getCellData(iTestCaseRow, Constant.DOB));
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			Log.info("Dateofbirth is selected");
 			FCC_Page.FCC_Form.FCCForm_HomeSTDCode().sendKeys(ExcelUtils.getCellData(iTestCaseRow, Constant.homeSTD));
 			Log.info("homestd is selected");
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			
 			FCC_Page.FCC_Form.FCCForm_HomeLandline()
 					.sendKeys(ExcelUtils.getCellData(iTestCaseRow, Constant.homeLandline));
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			FCC_Page.FCC_Form.FCCForm_OfficeSTDCode()
 					.sendKeys(ExcelUtils.getCellData(iTestCaseRow, Constant.officeSTD));
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			FCC_Page.FCC_Form.FCCForm_OfficeLandline()
 					.sendKeys(ExcelUtils.getCellData(iTestCaseRow, Constant.officeLandline));
 			
-			Thread.sleep(20000);
+			//Thread.sleep(20000);
 			//Utils.scrollingToPageElementByCordinate(936, 386);
 			//Utils.verifyElement(FCC_Page.FCC_Form.FCCForm_Email());
 		} catch (Exception e) {

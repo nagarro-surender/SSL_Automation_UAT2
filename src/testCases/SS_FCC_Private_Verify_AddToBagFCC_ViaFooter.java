@@ -15,6 +15,7 @@ import pageObjects.Home_Page;
 import pageObjects.MiniCart_Page;
 import appModules.CheckOut_Action;
 import appModules.FCC_Action;
+import appModules.HomePage_Action;
 import appModules.Login_App;
 import utility.Constant;
 import utility.ExcelUtils;
@@ -89,17 +90,17 @@ public class SS_FCC_Private_Verify_AddToBagFCC_ViaFooter {
 			Log.info("Verification for Buying FCC for registered user started.");
 			Login_App.execute(iTestCaseRow);
 			Log.info("Log in successfull for Registered User");
-
+            HomePage_Action.removeAllItemFromCart();
 			Home_Page.Footer_Section.First_Citizen().click();
 			Log.info("FCC linked clicked from footer section successfully");
 			
 			FCC_Action.FCC_Verify_AddToBag_FCC_ViaFooterLink(iTestCaseRow);
 			Log.info("FCC added to cart successfully");
 
-			MiniCart_Page.MiniCartProductDetails.MiniCartViewBag().click();
-			Log.info("View bag button on mini cart clicked successfully");
+//			MiniCart_Page.MiniCartProductDetails.MiniCartViewBag().click();
+//			Log.info("View bag button on mini cart clicked successfully");
 
-			Cart_Page.CheckoutButton().click();
+			Cart_Page.CheckoutButtonOnMiniCartFCC().click();
 			Log.info("Checkout button on Cart Page clicked successfully");
 
 			//Utils.verifyElement(Checkout_Page.TopNavigation.CheckOutText());
@@ -111,11 +112,11 @@ public class SS_FCC_Private_Verify_AddToBagFCC_ViaFooter {
 
 			//CheckOut_Action.PaymentOption(iTestCaseRow);
 			
-			Home_Page.headerSoppersStopLogocheckout().click();
-			Thread.sleep(2000);
-			Home_Page.headerMiniCartIcon().click();
-			Thread.sleep(2000);
-            Home_Page.headerMiniCartIconclose().click();
+//			Home_Page.headerSoppersStopLogocheckout().click();
+//			Thread.sleep(2000);
+//			Home_Page.headerMiniCartIcon().click();
+//			Thread.sleep(2000);
+//            Home_Page.headerMiniCartIconclose().click();
 
 			if (BaseClass.bResult == true) {
 				Log.info("Forget password functionality is working fine");

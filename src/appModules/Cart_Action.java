@@ -574,17 +574,17 @@ public class Cart_Action {
 		String productQuantity = "";
 		String productSize = "";
 		try {
-			productQuantity = Cart_Page.UpdateQuantity().get(0).getAttribute("value");
+			productQuantity = Cart_Page.UpdateQuantity().get(1).getAttribute("value");
 			Thread.sleep(3000);
-			Cart_Page.EditCartLink().get(0).click();
+			Cart_Page.EditCartLink().get(1).click();
 			Log.info("Edit cart link clicked successfully");
 			Thread.sleep(5000);
-			Utils.SelectDropdownUpdated(Cart_Page.UpdateProductSize().get(0));
+			Utils.SelectDropdownUpdated(Cart_Page.UpdateProductSize().get(1));
 			Thread.sleep(3000);
 			Cart_Page.UpdateCartItem().get(0).sendKeys(Keys.ENTER);
 			Log.info("Update cart link clicked successfully");
 			Thread.sleep(3000);
-			if (Cart_Page.UpdateQuantity().get(0).getAttribute("value").equals(productQuantity)) {
+			if (Cart_Page.UpdateQuantity().get(1).getAttribute("value").equals(productQuantity)) {
 				BaseClass.errorValidation += "Product quantity increase functionality not working\n";
 			}
 		} catch (Exception e) {

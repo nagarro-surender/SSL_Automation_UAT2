@@ -58,7 +58,7 @@ public class Home_Page extends BaseClass {
 
 		try {
 			Log.info("Locating Clinique Brand element");
-			element = Driver.findElement(By.xpath("//a[contains(@href,'clinique')]"));
+			element = Driver.findElement(By.xpath("//a[contains(@href,'/brand/clinique')]"));
 
 			Log.info("Clinique Brand element is found on the Home Page");
 
@@ -545,8 +545,8 @@ public class Home_Page extends BaseClass {
 
 			try {
 				Log.info("Locating First_Citizen element");
-				//element = Driver.findElement(By.xpath("//a[contains(@title, 'FIRST CITIZEN')]"));
-				element = Driver.findElement(By.xpath("html/body/main/footer/div[3]/div/div/div/div/ul/li[4]/div/ul/li[1]/a"));
+				element = Driver.findElement(By.xpath("//a[contains(@title, 'FIRST CITIZEN')]"));
+				//element = Driver.findElement(By.xpath("html/body/main/footer/div[3]/div/div/div/div/ul/li[4]/div/ul/li[1]/a"));
 
 				Log.info("First Citizen Link found under Footer Section");
 
@@ -839,7 +839,7 @@ public class Home_Page extends BaseClass {
 		try {
 			Log.info("Locating headerSoppersStopLogo element");
 			element = Driver.findElement(By.xpath(
-					"html/body/main/header/div/div/div/div[3]/a"));
+					"//*[@href='/']"));
 
 			Log.info("Shoppers Stop logo is found on the Header on Home Page");
 
@@ -1052,6 +1052,40 @@ public class Home_Page extends BaseClass {
 		return element;
 
 	}
+	
+	public static WebElement MiniCartItemCount() throws Exception {
+		try {
+			Log.info("Locating headerWishlistMenuText element");
+			element = Driver.findElement(By.xpath("//span[@class='qtyHeaderMinicart']"));
+
+			Log.info("MiniCart Item count is found on Home Page");
+
+		} catch (Exception e) {
+			Log.error("Exception in Class Home_Page | Method MiniCartItemCount");
+			Log.error("MiniCart Item count is not found on the Home Page");
+			throw e;
+		}
+
+		return element;
+
+	}
+	
+	public static WebElement MiniCartItemRemove() throws Exception {
+		try {
+			Log.info("Locating MiniCartItem element");
+			element = Driver.findElement(By.xpath(".//*[@id='removeFromCartID'][1]"));
+
+			Log.info("MiniCartItem is found on Home Page");
+
+		} catch (Exception e) {
+			Log.error("Exception in Class Home_Page | Method MiniCartItemRemove");
+			Log.error("MiniCartItem is not found on the Home Page");
+			throw e;
+		}
+
+		return element;
+
+	}
 
 	public static List<WebElement> headerWishlistUserMenu()throws Exception {
 		try {
@@ -1063,6 +1097,22 @@ public class Home_Page extends BaseClass {
 		} catch (Exception e) {
 			Log.error("Exception in Class Home_Page | Method headerWishlistUserMenu");
 			Log.error("Wishlist user menu is not found on the Home Page");
+			throw e;
+		}
+
+		return webElements;
+	}
+	
+	public static List<WebElement> MiniCartItems()throws Exception {
+		try {
+			Log.info("Locating MiniCartItems elements");
+			webElements = Driver.findElements(By.xpath(".//*[@id='removeFromCartID']"));
+
+			Log.info("MiniCartItems is found on Home Page");
+
+		} catch (Exception e) {
+			Log.error("Exception in Class Home_Page | Method MiniCartItems");
+			Log.error("MiniCartItems is not found on the Home Page");
 			throw e;
 		}
 
