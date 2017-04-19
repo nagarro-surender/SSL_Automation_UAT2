@@ -64,13 +64,13 @@ public class SS_ViewBag_CheckOut_MiniCart_AlreadyLoginUser_SelectingdeliveryAddr
 	public void main() throws Exception {
 		try {
 			
-		 String BeforePrice="";
+		    String BeforePrice="";
             String AfterPrice="";
             String BeforePricesub="";
-	            String AfterPricesub="";
-	            Login_App.execute(iTestCaseRow);    
+	        String AfterPricesub="";
+	        Login_App.execute(iTestCaseRow);    
 	     	HomePage_Action.selectProductCategoryfromMenu(iTestCaseRow);
-		ProductListing_Page.product().click();
+		    ProductListing_Page.product().click();
 			Log.info("Product icon is clicked");
 			
 			PDP_Action.product_selectSize(ProductDetails_Page.Product.size_variant_buttonlist());
@@ -96,15 +96,15 @@ public class SS_ViewBag_CheckOut_MiniCart_AlreadyLoginUser_SelectingdeliveryAddr
 			Cart_Page.BacktoCartPageButton().click();
 			Thread.sleep(5000);
 			
-		Cart_Action.Verify_Private_Cart_Page_ApplyCoupanOnCartPage(iTestCaseRow);
-		Thread.sleep(5000);
+		    Cart_Action.Verify_Private_Cart_Page_ApplyCoupanOnCartPage(iTestCaseRow);
+		    Thread.sleep(5000);
 			//BeforePrice=Cart_Page.TotalCartPriceViewPage().getAttribute("content");
 			//System.out.println(BeforePrice);
-		Cart_Page.CheckoutButtonOnCart().click();
-		Checkout_Page.Paymentinfo.ProceedToPaymentButton().click();
-		Thread.sleep(5000);
-		AfterPrice= Cart_Page.TotalCartPriceCheckout().getText();
-		System.out.println(AfterPrice);
+		    Cart_Page.CheckoutButtonOnCart().click();
+		    Checkout_Page.Paymentinfo.ProceedToPaymentButton().click();
+		    Thread.sleep(5000);
+		    AfterPrice= Cart_Page.TotalCartPriceCheckout().getText();
+		    System.out.println(AfterPrice);
 			//System.out.println(AfterPrice.substring(11, 16));
 			//AfterPricesub=AfterPrice.substring(11, 16);
 			//System.out.println(BeforePrice.substring(3, 8));

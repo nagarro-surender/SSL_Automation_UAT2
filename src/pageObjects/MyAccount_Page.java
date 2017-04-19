@@ -71,6 +71,24 @@ public class MyAccount_Page extends BaseClass {
 
 		}
 		
+		public static WebElement ReturnExchangedTab() throws Exception {
+
+			try {
+				Log.info("Locating Return Exchanged Tab element");
+				element = Driver.findElement(By.xpath("//*[contains(text(),'Return/Exchange Orders')]"));
+
+				Log.info("Return Exchanged Tab is found on the My Account Page");
+
+			} catch (Exception e) {
+				Log.error("Exception in Class MyAccount_Page | Method ReturnExchangedTab");
+				Log.error("Return Exchanged Tab is not found on the Order Detail Page");
+				throw e;
+			}
+
+			return element;
+
+		}
+		
 		public static WebElement RecentOrderText() throws Exception {
 
 			try {
@@ -106,6 +124,26 @@ public class MyAccount_Page extends BaseClass {
 			return elementList;
 
 		}
+		
+		public static List<WebElement> myAccountReturned_OrderId() throws Exception {
+
+			try {
+				Log.info("Locating Returned Exchanged OrderId elements");
+				elementList = Driver.findElements(By.xpath("//*[@class='rec-order-list']//*[@class='clearfix']//label[text()='Order ID']"));
+
+				Log.info("Returned and exchanged Order Id elements are found on the My Account Page");
+
+			} catch (Exception e) {
+				Log.error("Exception in Class MyAccount_Page | Method myAccountReturned_OrderId");
+				Log.error("Returned and exchanged elements are not found on the My Account Page");
+				throw e;
+			}
+
+			return elementList;
+
+		}
+		
+		
 		
 		public static List<WebElement> myAccount_OrderDate() throws Exception {
 

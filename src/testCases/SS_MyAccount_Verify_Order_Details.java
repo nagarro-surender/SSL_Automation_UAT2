@@ -72,11 +72,12 @@ public class SS_MyAccount_Verify_Order_Details {
 			Utils.waitForElement(MyAccount_Page.OrderHistory.ViewMoreButton());
 			MyAccount_Action.verifyOrderDetails_OrderHistoryPage(iTestCaseRow);
 			MyAccount_Action.OrderNumber_Verify_OrderDetailPage_Functionality(iTestCaseRow);
+			Thread.sleep(3000);
+			MyAccount_Page.MyAccount_LeftMenu.Orders().click();
 			Utils.scrollingToPageElementAdvanced(MyAccount_Page.OrderHistory.ViewMoreButton());
 			MyAccount_Page.OrderHistory.ViewMoreButton().sendKeys(Keys.ENTER);
 			//Thread.sleep(5000);
-			MyAccount_Action.OrderNumber_Verify_OrderDetailPage_Functionality(iTestCaseRow);
-			Log.info("Order details verified");
+			
 			Utils.scrollingToPageElementAdvanced(MyAccount_Page.MyAccount_LeftMenu.Orders());
 			MyAccount_Page.OrderHistory.OrderAction().get(0).sendKeys(Keys.ENTER);
 			Log.info("View Order button is clicked");

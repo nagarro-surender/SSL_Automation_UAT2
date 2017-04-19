@@ -68,7 +68,7 @@ public class SS_MyAccount_Verify_Order_Exchange_Unapproved_Details {
 			Home_Page.MyAccount().click();
 			MyAccount_Page.MyAccount_LeftMenu.Orders().click();
 			//Thread.sleep(5000);
-			MyAccount_Page.OrderHistory.OrderAction().get(4).sendKeys(Keys.ENTER);
+			MyAccount_Page.OrderHistory.OrderAction().get(0).sendKeys(Keys.ENTER);
 			Log.info("View Order button is clicked");
 			MyAccount_Page.OrderHistory.ReturnExchangeButton().click();
 			MyAccount_Page.OrderHistory.ReturnExchangeWindowExchangeButton().click();

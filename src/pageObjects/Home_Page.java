@@ -545,7 +545,7 @@ public class Home_Page extends BaseClass {
 
 			try {
 				Log.info("Locating First_Citizen element");
-				element = Driver.findElement(By.xpath("//a[contains(@title, 'FIRST CITIZEN')]"));
+				element = Driver.findElement(By.xpath("//a[contains(@title, 'First Citizen')]"));
 				//element = Driver.findElement(By.xpath("html/body/main/footer/div[3]/div/div/div/div/ul/li[4]/div/ul/li[1]/a"));
 
 				Log.info("First Citizen Link found under Footer Section");

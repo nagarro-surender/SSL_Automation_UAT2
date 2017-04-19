@@ -68,7 +68,7 @@ public class SS_MyAccount_Verify_Order_Exchange_OutOfStock_Details {
 			Home_Page.MyAccount().click();
 			MyAccount_Page.MyAccount_LeftMenu.Orders().click();
 			//Thread.sleep(5000);
-			MyAccount_Page.OrderHistory.OrderAction().get(5).sendKeys(Keys.ENTER);
+			MyAccount_Page.OrderHistory.OrderAction().get(2).sendKeys(Keys.ENTER);
 			Log.info("View Order button is clicked");
 			MyAccount_Page.OrderHistory.ReturnExchangeButton().click();
 			MyAccount_Action.Verify_OrderDetailPage_Exchange_OutOfStock_Functionality(iTestCaseRow);
