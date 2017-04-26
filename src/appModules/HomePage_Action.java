@@ -275,22 +275,26 @@ public class HomePage_Action {
 		try {
 			
 			Log.info("Verification for NewsLetter Subscribe Email Functionality for Empty field");
-			Utils.mouseHover(Home_Page.NewsLetterButton());
+			//Utils.scrollingToPageElementAdvanced(Home_Page.StartSoemthingnew());
+			//Utils.mouseHover(Home_Page.NewsLetterButton());
 			Home_Page.NewsLetterButton().sendKeys(Keys.ENTER);
+			System.out.println(Home_Page.NewsLetterAlert().getText());
 			Utils.performAssertEquals(Home_Page.NewsLetterAlert(),
 					ExcelUtils.getCellData(iTestCaseRow, Constant.message1));
 		} catch (Exception e) {
 			Log.error("Verification check Failed for NewsLetter Subscribe Email Field for Empty field");
 			BaseClass.errorValidation += "Newsletter subscribe button not clicked on Home Page\n";
 		}
+		Thread.sleep(3000);
 		try {
 			Log.info("Verification for NewsLetter Subscribe Email Functionality for invalid mail address");
 			Home_Page.NewsletterEmail().clear();
 			Home_Page.NewsletterEmail().sendKeys(ExcelUtils.getCellData(iTestCaseRow, Constant.invalidEmailId));
 			//Thread.sleep(10000);
 			//Utils.scrollingToPageElementByCordinate(1275, 5500);
-			Utils.mouseHover(Home_Page.NewsLetterButton());
-			Home_Page.NewsLetterButton().sendKeys(Keys.ENTER);
+			//Utils.mouseHover(Home_Page.NewsLetterButton());
+			Home_Page.NewsLetterButton().click();
+			System.out.println(Home_Page.NewsLetterAlert().getText());
 			Utils.performAssertEquals(Home_Page.NewsLetterAlert(),
 					ExcelUtils.getCellData(iTestCaseRow, Constant.message2));
 		} catch (Exception e) {
@@ -300,12 +304,15 @@ public class HomePage_Action {
 		
 
 		}
+		Thread.sleep(3000);
 		try {
 			Log.info("Verification for NewsLetter Subscribe Email Functionality for Valid email address");
 			Home_Page.NewsletterEmail().clear();
 			Home_Page.NewsletterEmail().sendKeys(ExcelUtils.getCellData(iTestCaseRow, Constant.emailId));
-			Utils.mouseHover(Home_Page.NewsLetterButton());
-			Home_Page.NewsLetterButton().sendKeys(Keys.ENTER);
+			//Utils.mouseHover(Home_Page.NewsLetterButton());
+			Home_Page.NewsLetterButton().click();
+			//System.out.println(Home_Page.NewsLetterAlert());
+			System.out.println(Home_Page.NewsLetterAlert().getText());
 			Utils.performAssertEquals(Home_Page.NewsLetterAlert(),
 					ExcelUtils.getCellData(iTestCaseRow, Constant.message3));
 		} catch (Exception e) {
