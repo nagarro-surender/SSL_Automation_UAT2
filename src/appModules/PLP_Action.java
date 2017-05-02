@@ -705,6 +705,28 @@ public class PLP_Action {
 		}
 	}
 
+	
+	public static void PLP__Select_Color_Functionality(int iTestCaseRow) throws Exception {
+		String productCount = "";
+		Log.info("Verification for selecting Color chckbox from Primary Filter Functionality on PLP page");
+		try {
+
+			//productCount = ProductListing_Page.ProductCount().getText();
+			Utils.scrollingToPageElementAdvanced(ProductListing_Page.PrimaryFilterSizeDropDown());
+			ProductListing_Page.SelectColorCheckbox(ExcelUtils.getCellData(iTestCaseRow, Constant.productColor))
+					.sendKeys(Keys.SPACE);
+			Log.info("Color specific filter applied on PLP page");
+			
+		} catch (Exception e) {
+			Log.error(e.getMessage());
+			Log.error("Exception in Class PLP_Action | Method PLP__Select_Color_Functionality");
+			throw e;
+		}
+		if (!BaseClass.errorValidation.isEmpty()) {
+			Log.error("Exception in Class PLP_Action | Method PLP__Select_Color_Functionality");
+			throw new Exception(BaseClass.errorValidation);
+		}
+	}
 	public static void PLP_Verify_Product_Details(int iTestCaseRow) throws Exception {
 
 		Log.info("Verification for Product Information Details on PLP page");

@@ -1,12 +1,10 @@
 package testCases;
 
 import org.apache.log4j.xml.DOMConfigurator;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import pageObjects.BaseClass;
 import pageObjects.ProductDetails_Page;
 import pageObjects.ProductListing_Page;
@@ -64,9 +62,7 @@ public class SS_PDP_WriteReview_AutoScrollToBottom {
 			HomePage_Action.selectProductCategoryfromMenu(iTestCaseRow);
 			ProductListing_Page.product().click();
 			Log.info("Product icon is clicked");
-			Utils.scrollingToPageElementAdvanced(ProductDetails_Page.Product.WriteReview());
-			ProductDetails_Page.Product.WriteReview().sendKeys(Keys.ENTER);
-			//ProductDetails_Page.Product.WriteReview().click();
+			ProductDetails_Page.Product.WriteReview().click();
 			Log.info("Write a review button is clicked on PDP");
 
 			if (ProductDetails_Page.PersistenceProduct.persistentHeader().isDisplayed()) {
