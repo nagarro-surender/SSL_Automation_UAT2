@@ -92,7 +92,7 @@ public class HomePage_Action {
 			BaseClass.errorValidation = BaseClass.errorValidation
 					+ "The Easy Exchange and Returns Link is not present in the Grid Box on Home Page \n";
 		}
-		try {
+		/*try {
 			Log.info("Verification for COD Link on Grid Box");
 			Static_Page.GridBox.CashOnDelivery().click();
 			Utils.PageHeaderCheck("How do I pay Template | Shoppers Stop");
@@ -104,7 +104,7 @@ public class HomePage_Action {
 			Log.error("Verification check Failed for COD Link on Grid Box");
 			BaseClass.errorValidation = BaseClass.errorValidation
 					+ "The COD Link is not present in the Grid Box on Home Page \n";
-		}
+		}*/
 		if (!BaseClass.errorValidation.isEmpty()) {
 			Log.error("Exception in Class HomePage_Action | Method HomePage_Verify_GridBox_Links");
 			throw new Exception(BaseClass.errorValidation);

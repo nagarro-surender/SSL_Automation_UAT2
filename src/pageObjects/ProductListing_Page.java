@@ -745,7 +745,7 @@ public static List<WebElement> DefaultAttributeFilterCategoryContainer()throws E
 					//.xpath("//ul[@id='qv-drop']//li[1]/descendant::div[@class='pro-img']"));
 			
 			element = Driver.findElement(By
-					.xpath(".//*[@id='1HashPosition']/a/picture/div/div/div/ul/li[1]/a/img"));
+					.xpath(".//*[@id='1HashPosition']"));
 			Log.info("Product Image is present on PLP ");
 
 		} catch (Exception e) {

@@ -1,9 +1,7 @@
 package testCases;
 
 import org.apache.log4j.xml.DOMConfigurator;
-
 import org.openqa.selenium.WebDriver;
-
 import org.testng.annotations.AfterMethod;
 
 //import org.testng.annotations.AfterSuite;
@@ -13,7 +11,6 @@ import org.testng.annotations.Test;
 import pageObjects.BaseClass;
 import pageObjects.Cart_Page;
 import pageObjects.Checkout_Page;
-
 import pageObjects.MiniCart_Page;
 import pageObjects.ProductDetails_Page;
 import pageObjects.ProductListing_Page;
@@ -92,14 +89,14 @@ public class SS_CheckOut_GuestUser_EmptyField {
 			Utils.verifyElement(MiniCart_Page.MiniCartWindow());
 			Log.info("Product is added to the cart and mini cart is displayed");
 
-			MiniCart_Page.MiniCartProductDetails.MiniCartViewBag().click();
-			Log.info("View bag button is clicked on Mini cart window");
+            Utils.verifyElement(Cart_Page.CheckOutButtonOnMiniCart());
 			
-			Utils.verifyElement(Cart_Page.CheckoutButton());
-			Cart_Page.CheckoutButton().click();
+			Cart_Page.CheckOutButtonOnMiniCart().click();
 			Log.info("Checkout button is clicked on cart page");
+            Thread.sleep(2000);
 	
-			
+            Checkout_Page.LoginDetails.ContinueGuestradioButton().click();
+            Thread.sleep(3000);
 			String userEmail = ExcelUtils.getCellData(iTestCaseRow, Constant.emailId);
 			Checkout_Page.LoginDetails.LoginEmailGuest().sendKeys(userEmail);
 			Log.info("User email id is entered successfully");

@@ -69,8 +69,8 @@ public class SS_PLP_Verify_QuickView_Link {
 			Log.info("Product Listing Page opened");
 			//Utils.scrollingToPageElementByCordinate(462, 380);
 			//Log.info("Screen scrolled to first product image");
-			Utils.mouseHover(ProductListing_Page.FirstProductImage());
-			Log.info("Mouse hovered over first product image");
+			//Utils.mouseHover(ProductListing_Page.FirstProductImage());
+			//Log.info("Mouse hovered over first product image");
 			ProductListing_Page.ProductQuickViewTag().click();
 			Log.info("Quick View tag clicked on PLP");
 			PLP_Action.PLP_Verify_QuickView_Link(iTestCaseRow);

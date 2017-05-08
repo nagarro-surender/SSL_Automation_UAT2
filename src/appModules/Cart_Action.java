@@ -576,9 +576,9 @@ public class Cart_Action {
 		try {
 			productQuantity = Cart_Page.UpdateQuantity().get(1).getAttribute("value");
 			Thread.sleep(3000);
-			Cart_Page.EditCartLink().get(1).click();
-			Log.info("Edit cart link clicked successfully");
-			Thread.sleep(5000);
+			//Cart_Page.EditCartLink().get(1).click();
+			//Log.info("Edit cart link clicked successfully");
+			//Thread.sleep(5000);
 			Utils.SelectDropdownUpdated(Cart_Page.UpdateProductSize().get(1));
 			Thread.sleep(3000);
 			Cart_Page.UpdateCartItem().get(0).sendKeys(Keys.ENTER);
